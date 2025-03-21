@@ -1,7 +1,15 @@
 import './App.css'
 import SelectButton from './components/selectButton/SelectButton';
+import SelectBodySideBtn from './components/selectBodySideBtn/SelectBodySideBtn';
+import { useState } from 'react';
 
 function App() {
+
+  const [side, setSide] = useState("front");
+
+  function onSideChange() {
+    setSide(prevSide => prevSide === "front" ? "back" : "front");
+  }
 
   const bodyParts = {
     manBack: [
@@ -34,12 +42,6 @@ function App() {
     ]
   }
 
-  function findPart() {
-    const findP = bodyParts.manBack.find(f => f.id === 3);
-    console.log("part finded in body : ", findP);
-  }
-
-  findPart();
 
   return (
     <main className='w-full flex flex-col gap-4'>
@@ -54,6 +56,12 @@ function App() {
           <SelectButton id={"backSide"} radioName={"bodySide"}>
             Back Body
           </SelectButton>
+          <SelectBodySideBtn
+            onClick={onSideChange}
+            side={side}
+          >
+            show side
+          </SelectBodySideBtn>
         </aside>
         <section
           className='grow'
