@@ -50,18 +50,13 @@ function App() {
       </section>
       <section className='flex gap-2'>
         <aside className='flex gap-2 flex-col'>
-          <SelectButton id={"frontSide"} radioName={"bodySide"}>
+          {/* <SelectButton id={"frontSide"} radioName={"bodySide"}>
             Front Body
           </SelectButton>
           <SelectButton id={"backSide"} radioName={"bodySide"}>
             Back Body
-          </SelectButton>
-          <SelectBodySideBtn
-            onClick={onSideChange}
-            side={side}
-          >
-            show side
-          </SelectBodySideBtn>
+          </SelectButton> */}
+          <SelectBodySideBtn onClick={onSideChange} side={side} />
         </aside>
         <section
           className='grow'

@@ -1,4 +1,4 @@
-function SelectBodySideBtn({children, onClick, side}) {
+function SelectBodySideBtn({ onClick, side }) {
 
     return (
         <button
@@ -6,7 +6,7 @@ function SelectBodySideBtn({children, onClick, side}) {
             onClick={onClick}
             type="button"
         >
-            {side=== "front" ? "Show Back": "Show Front"}
+            {side === "front" ? "Show Back" : "Show Front"}
         </button>
     );
 }
