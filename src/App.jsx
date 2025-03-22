@@ -3,14 +3,14 @@ import SelectButton from './components/selectButton/SelectButton';
 import SelectBodySideBtn from './components/selectBodySideBtn/SelectBodySideBtn';
 import { useState } from 'react';
 import BackBodyParts from './components/backBodyParts/BackBodyParts';
+import FrontBodyParts from './components/frontBodyParts/FrontBodyParts';
+import Part from './components/part/Part';
+import Swal from 'sweetalert2';
 
 function App() {
 
   const [side, setSide] = useState("front");
-
-  function onSideChange() {
-    setSide(prevSide => prevSide === "front" ? "back" : "front");
-  }
+  // const [selectedPart, setSelectedPart] = useState(null);
 
   const bodyParts = {
     backParts: [
@@ -38,9 +38,25 @@ function App() {
       { id: 22, name: "backLeftFoot", src: "./src/assets/manBack/backLeftFoot.png", partClass: "w-8.5 row-start-8 col-start-2 absolute left-[0.55rem] top-[0.58rem]" },
     ],
     frontParts: [
-      { id: 23, name: "Head", src: "./src/assets/manFront/head.png" },
-      { id: 24, name: "Neck", src: "./src/assets/manFront/neck.png" },
+      { id: 23, name: "Head", src: "./src/assets/manFront/head.png", partClass: "" },
+      { id: 24, name: "Neck", src: "./src/assets/manFront/neck.png", partClass: "" },
     ]
+  }
+
+  function onSideChange() {
+    setSide(prevSide => prevSide === "front" ? "back" : "front");
+  }
+
+  function clickHandler(part) {
+    // setSelectedPart(part);
+
+    Swal.fire({
+      title: `${part.name} is selected`,
+      imageUrl: part.src,
+      imageWidth: 90,
+      // imageHeight: 200,
+      imageAlt: part.name
+    });
   }
 
 
@@ -63,7 +79,15 @@ function App() {
           className='grow  py-6 bg-blue-800 max-h-full'
         >
           <div className='w-full flex justify-center gap-4'>
-            <BackBodyParts backParts={bodyParts.backParts} />
+            <BackBodyParts>
+              {bodyParts.backParts.map(part => <Part
+                key={part.id}
+                partSrc={part.src}
+                partName={part.name}
+                partClass={part.partClass}
+                onClick={() => clickHandler(part)}
+              />)}
+            </BackBodyParts>
           </div>
         </section>
       </section>

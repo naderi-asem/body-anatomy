@@ -1,6 +1,6 @@
-function Part({ partSrc, partName, partClass }) {
+function Part({ partSrc, partName, partClass, onClick }) {
     return (
-        <button className={`${partClass} hover:opacity-85`}>
+        <button onClick={onClick} className={`${partClass} hover:opacity-85`}>
             <img src={partSrc} alt={partName} />
         </button>
     );
