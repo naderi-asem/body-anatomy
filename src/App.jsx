@@ -40,6 +40,23 @@ function App() {
     frontParts: [
       { id: 23, name: "Head", src: "./src/assets/manFront/head.png", partClass: "" },
       { id: 24, name: "Neck", src: "./src/assets/manFront/neck.png", partClass: "" },
+      { id: 25, name: "Chest", src: "./src/assets/manFront/chest.png", partClass: "" },
+      { id: 26, name: "FrontLowerBody", src: "./src/assets/manFront/frontLowerBody.png", partClass: "" },
+      { id: 27, name: "Circle", src: "./src/assets/manFront/circle.png", partClass: "" },
+      { id: 28, name: "RightArm", src: "./src/assets/manFront/rightArm.png", partClass: "" },
+      { id: 29, name: "LeftArm", src: "./src/assets/manFront/leftArm.png", partClass: "" },
+      { id: 30, name: "RightForeArm", src: "./src/assets/manFront/rightForeArm.png", partClass: "" },
+      { id: 31, name: "LeftForeArm", src: "./src/assets/manFront/leftForeArm.png", partClass: "" },
+      { id: 32, name: "RightHand", src: "./src/assets/manFront/rightHand.png", partClass: "" },
+      { id: 33, name: "LeftHand", src: "./src/assets/manFront/leftHand.png", partClass: "" },
+      { id: 34, name: "RightThigh", src: "./src/assets/manFront/rightThigh.png", partClass: "" },
+      { id: 35, name: "LeftThigh", src: "./src/assets/manFront/leftThigh.png", partClass: "" },
+      { id: 36, name: "RightKnee", src: "./src/assets/manFront/rightKnee.png", partClass: "" },
+      { id: 37, name: "LeftKnee", src: "./src/assets/manFront/leftKnee.png", partClass: "" },
+      { id: 38, name: "RightLeg", src: "./src/assets/manFront/rightLeg.png", partClass: "" },
+      { id: 39, name: "LeftLeg", src: "./src/assets/manFront/leftLeg.png", partClass: "" },
+      { id: 40, name: "RightFoot", src: "./src/assets/manFront/rightFoot.png", partClass: "" },
+      { id: 41, name: "LeftFoot", src: "./src/assets/manFront/leftFoot.png", partClass: "" },
     ]
   }
 
