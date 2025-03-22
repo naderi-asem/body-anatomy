@@ -35,7 +35,7 @@ function App() {
       { id: 19, name: "backRightLeg", src: "./src/assets/manBack/backRightLeg.png", partClass: "w-8.5 row-start-6 col-start-2 absolute left-17 top-[2.4rem]" },
       { id: 20, name: "backLeftLeg", src: "./src/assets/manBack/backLeftLeg.png", partClass: "w-8.5 row-start-6 col-start-2 absolute left-4.5 top-[2.48rem]" },
       { id: 21, name: "backRightFoot", src: "./src/assets/manBack/backRightFoot.png", partClass: "w-8.5 row-start-8 col-start-2 absolute left-18.5 top-2" },
-      { id: 22, name: "backLeftFoot", src: "./src/assets/manBack/backLeftFoot.png", partClass: "w-8.5 row-start-8 col-start-2 absolute left-[0.55rem] top-[0.55rem]" },
+      { id: 22, name: "backLeftFoot", src: "./src/assets/manBack/backLeftFoot.png", partClass: "w-8.5 row-start-8 col-start-2 absolute left-[0.55rem] top-[0.58rem]" },
     ],
     frontParts: [
       { id: 23, name: "Head", src: "./src/assets/manFront/head.png" },
@@ -71,4 +71,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
