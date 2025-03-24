@@ -1,10 +1,8 @@
-import Part from "../part/Part";
-
 function FrontBodyParts({ children }) {
     return (
-        <div className="bg-blue-800 grid grid-cols-3 grid-rows-8 w-80 relative">
+        <>
             {children}
-        </div>
+        </>
     );
 }
 

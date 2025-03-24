@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 
 function App() {
 
-  const [side, setSide] = useState("front");
+  const [selectedSide, setSelectedSide] = useState("front");
   // const [selectedPart, setSelectedPart] = useState(null);
 
   const bodyParts = {
@@ -40,17 +40,17 @@ function App() {
     frontParts: [
       { id: 23, name: "Head", src: "./src/assets/manFront/head.png", partClass: "col-span-1 col-start-2 row-start-2 justify-items-center" },
       { id: 24, name: "Neck", src: "./src/assets/manFront/neck.png", partClass: "w-6 row-start-3 col-start-2 absolute left-[2.55rem] -top-[0.67rem]" },
-      { id: 25, name: "Chest", src: "./src/assets/manFront/chest.png", partClass: "row-start-3 col-start-2 absolute left-4.5 top-0.5" },
-      { id: 26, name: "FrontLowerBody", src: "./src/assets/manFront/frontLowerBody.png", partClass: "row-start-5 col-start-2  absolute -top-2.5 left-6" },
-      { id: 27, name: "Circle", src: "./src/assets/manFront/circle.png", partClass: "row-start-5 col-start-2 absolute left-[2.66rem] top-[0.55rem]" },
-      { id: 28, name: "RightArm", src: "./src/assets/manFront/rightArm.png", partClass: "row-start-3 col-start-2 absolute top-3 -left-1" },
-      { id: 29, name: "LeftArm", src: "./src/assets/manFront/leftArm.png", partClass: "w-6 row-start-3 col-start-2 absolute left-22 top-3" },
-      { id: 30, name: "RightForeArm", src: "./src/assets/manFront/rightForeArm.png", partClass: "w-4.5 row-start-4 col-start-2 absolute -left-2.5 top-3.5" },
-      { id: 31, name: "LeftForeArm", src: "./src/assets/manFront/leftForeArm.png", partClass: "w-[23px] row-start-4 col-start-3 absolute -left-[0.55rem] top-3.5" },
-      { id: 32, name: "RightHand", src: "./src/assets/manFront/rightHand.png", partClass: "w-4.5 row-start-5 col-start-2 absolute top-4.5 -left-2" },
-      { id: 33, name: "LeftHand", src: "./src/assets/manFront/leftHand.png", partClass: "w-4.5 row-start-5 col-start-3 absolute -left-2.5 top-4.5" },
-      { id: 34, name: "RightThigh", src: "./src/assets/manFront/rightThigh.png", partClass: "w-8.5 row-start-5 col-start-2 absolute left-4.5 top-0" },
-      { id: 35, name: "LeftThigh", src: "./src/assets/manFront/leftThigh.png", partClass: "w-8.5 row-start-5 col-start-2 absolute left-[3.4rem] top-0.5" },
+      { id: 25, name: "Chest", src: "./src/assets/manFront/chest.png", partClass: "row-start-3 col-start-2 absolute left-4.5 top-1" },
+      { id: 26, name: "FrontLowerBody", src: "./src/assets/manFront/frontLowerBody.png", partClass: "row-start-5 col-start-2  absolute -top-2 left-6" },
+      { id: 27, name: "Circle", src: "./src/assets/manFront/circle.png", partClass: "row-start-6 col-start-2 absolute left-[2.7rem] -top-[2.7rem]" },
+      { id: 28, name: "RightArm", src: "./src/assets/manFront/rightArm.png", partClass: "row-start-3 col-start-2 absolute top-3.5 -left-1" },
+      { id: 29, name: "LeftArm", src: "./src/assets/manFront/leftArm.png", partClass: "w-6 row-start-3 col-start-2 absolute left-22 top-3.5" },
+      { id: 30, name: "RightForeArm", src: "./src/assets/manFront/rightForeArm.png", partClass: "w-4.5 row-start-4 col-start-2 absolute -left-2.5 top-4" },
+      { id: 31, name: "LeftForeArm", src: "./src/assets/manFront/leftForeArm.png", partClass: "w-[23px] row-start-4 col-start-3 absolute -left-[0.55rem] top-4" },
+      { id: 32, name: "RightHand", src: "./src/assets/manFront/rightHand.png", partClass: "w-4.5 row-start-5 col-start-2 absolute top-5 -left-2" },
+      { id: 33, name: "LeftHand", src: "./src/assets/manFront/leftHand.png", partClass: "w-4.5 row-start-5 col-start-3 absolute -left-3 top-5" },
+      { id: 34, name: "RightThigh", src: "./src/assets/manFront/rightThigh.png", partClass: "w-8.5 row-start-5 col-start-2 absolute left-4.5 top-0.5" },
+      { id: 35, name: "LeftThigh", src: "./src/assets/manFront/leftThigh.png", partClass: "w-8.5 row-start-5 col-start-2 absolute left-[3.4rem] top-1" },
       { id: 36, name: "RightKnee", src: "./src/assets/manFront/rightKnee.png", partClass: "row-start-6 col-start-2 absolute left-[1.2rem] top-[1.3rem]" },
       { id: 37, name: "LeftKnee", src: "./src/assets/manFront/leftKnee.png", partClass: "w-8.5 row-start-6 col-start-2 absolute left-[4.08rem] top-[1.46rem]" },
       { id: 38, name: "RightLeg", src: "./src/assets/manFront/rightLeg.png", partClass: "row-start-6 col-start-2 absolute left-[1.07rem] top-[2.4rem]" },
@@ -61,7 +61,7 @@ function App() {
   }
 
   function onSideChange() {
-    setSide(prevSide => prevSide === "front" ? "back" : "front");
+    setSelectedSide(prevSide => prevSide === "front" ? "back" : "front");
   }
 
   function clickHandler(part) {
@@ -90,13 +90,13 @@ function App() {
           <SelectButton id={"backSide"} radioName={"bodySide"}>
             Back Body
           </SelectButton> */}
-          <SelectBodySideBtn onClick={onSideChange} side={side} />
+          <SelectBodySideBtn onClick={onSideChange} side={selectedSide} />
         </aside>
         <section
           className='grow  py-6 bg-blue-800 max-h-full'
         >
           <div className='w-full flex justify-center gap-4'>
-            <FrontBodyParts>
+            {/* <FrontBodyParts>
               {bodyParts.frontParts.map(part => <Part
                 key={part.id}
                 partSrc={part.src}
@@ -113,7 +113,10 @@ function App() {
                 partClass={part.partClass}
                 onClick={() => clickHandler(part)}
               />)}
-            </BackBodyParts>
+            </BackBodyParts> */}
+            {
+              selectedSide === "front" ? <BodySide sideParts={bodyParts.frontParts} onClick={clickHandler} /> : <BodySide sideParts={bodyParts.backParts} onClick={clickHandler} />
+            }
           </div>
         </section>
       </section>
@@ -122,3 +125,18 @@ function App() {
 }
 
 export default App;
+
+
+function BodySide({ sideParts, onClick }) {
+  return (
+    <div className="bg-fuchsia-600 min-h-[540px] rounded-md grid grid-cols-3 grid-rows-8 w-80 relative">
+      {sideParts.map(part => <Part
+        key={part.id}
+        partSrc={part.src}
+        partName={part.name}
+        partClass={part.partClass}
+        onClick={() => onClick(part)}
+      />)}
+    </div>
+  )
+}
