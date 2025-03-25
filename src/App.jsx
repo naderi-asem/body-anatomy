@@ -1,11 +1,12 @@
 import './App.css'
-import SelectButton from './components/selectButton/SelectButton';
+// import SelectButton from './components/selectButton/SelectButton';
 import SelectBodySideBtn from './components/selectBodySideBtn/SelectBodySideBtn';
 import { useState } from 'react';
-import BackBodyParts from './components/backBodyParts/BackBodyParts';
-import FrontBodyParts from './components/frontBodyParts/FrontBodyParts';
-import Part from './components/part/Part';
+// import BackBodyParts from './components/backBodyParts/BackBodyParts';
+// import FrontBodyParts from './components/frontBodyParts/FrontBodyParts';
+// import Part from './components/part/Part';
 import Swal from 'sweetalert2';
+import BodySide from './components/bodySide/BodySide';
 
 function App() {
 
@@ -80,7 +81,7 @@ function App() {
   return (
     <main className='w-full flex flex-col gap-4'>
       <section className='w-full bg-blue-800 rounded-md'>
-        <h1 className='text-emerald-50 font-semibold'>Body Anatomy</h1>
+        <h1 className='text-emerald-50 h-full text-2xl py-2 font-bold'>Body Anatomy</h1>
       </section>
       <section className='flex gap-2'>
         <aside className='flex gap-2 flex-col'>
@@ -127,16 +128,4 @@ function App() {
 export default App;
 
 
-function BodySide({ sideParts, onClick }) {
-  return (
-    <div className="bg-fuchsia-600 min-h-[540px] rounded-md grid grid-cols-3 grid-rows-8 w-80 relative">
-      {sideParts.map(part => <Part
-        key={part.id}
-        partSrc={part.src}
-        partName={part.name}
-        partClass={part.partClass}
-        onClick={() => onClick(part)}
-      />)}
-    </div>
-  )
-}
+
