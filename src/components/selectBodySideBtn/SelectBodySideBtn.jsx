@@ -2,7 +2,7 @@ function SelectBodySideBtn({ onClick, side }) {
 
     return (
         <button
-            className='cursor-pointer bg-sky-500 rounded-md h-8 w-30 select-none hover:scale-[1.02] hover:bg-sky-400 text-emerald-50 font-medium'
+            className={`cursor-pointer ${side==="front" ? 'bg-[#2c2c2c] text-[#cccccc]' : 'bg-[#c9c9c9]  text-[#2c2c2c]'} rounded-md h-10 w-30 select-none hover:scale-[1.02] hover:bg-[#b0b0b0] hover:text-[#2c2c2c] font-medium absolute top-10 z-1`}
             onClick={onClick}
             type="button"
         >

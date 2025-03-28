@@ -80,23 +80,13 @@ function App() {
 
   return (
     <main className='w-full flex flex-col gap-4'>
-      <section className='w-full bg-blue-800 rounded-md'>
-        <h1 className='text-emerald-50 h-full text-2xl py-2 font-bold'>Body Anatomy</h1>
-      </section>
       <section className='flex gap-2'>
-        <aside className='flex gap-2 flex-col'>
-          {/* <SelectButton id={"frontSide"} radioName={"bodySide"}>
-            Front Body
-          </SelectButton>
-          <SelectButton id={"backSide"} radioName={"bodySide"}>
-            Back Body
-          </SelectButton> */}
-          <SelectBodySideBtn onClick={onSideChange} side={selectedSide} />
-        </aside>
+
         <section
-          className='grow  py-6 bg-blue-800 max-h-full'
+          className='grow  py-6 max-h-full'
         >
           <div className='w-full flex justify-center gap-4'>
+            <SelectBodySideBtn onClick={onSideChange} side={selectedSide} />
             {/* <FrontBodyParts>
               {bodyParts.frontParts.map(part => <Part
                 key={part.id}
