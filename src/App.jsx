@@ -10,7 +10,7 @@ import BodySide from './components/bodySide/BodySide';
 
 function App() {
 
-  const [selectedSide, setSelectedSide] = useState("back");
+  const [selectedSide, setSelectedSide] = useState("front");
   // const [selectedPart, setSelectedPart] = useState(null);
 
   const bodyParts = {
