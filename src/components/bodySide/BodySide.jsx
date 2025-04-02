@@ -2,7 +2,7 @@ import Part from '../part/Part';
 
 function BodySide({ sideParts, onClick }) {
     return (
-      <div className="min-h-[800px] rounded-md grid grid-cols-[145px_145px_145px] grid-rows-8 relative">
+      <div className="h-[780px] w-[420px] bg-blue-500 rounded-md grid grid-cols-3 grid-rows-8 relative">
         {sideParts.map(part => <Part
           key={part.id}
           partSrc={part.src}
