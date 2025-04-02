@@ -48,7 +48,7 @@ function App() {
       { id: 29, name: "LeftArm", src: "./src/assets/manFront/leftArm.png", partClass: "row-start-3 col-start-3 left-[3px] top-[37px]" },
       { id: 30, name: "RightForeArm", src: "./src/assets/manFront/rightForeArm.png", partClass: "row-start-4 col-start-2 -left-[43px] top-[37px]" },
       { id: 31, name: "LeftForeArm", src: "./src/assets/manFront/leftForeArm.png", partClass: "row-start-4 col-start-3 left-[19px] top-[37px]" },
-      { id: 32, name: "RightHand", src: "./src/assets/manFront/rightHand.png", partClass: "row-start-5 col-start-2 top-[33.5px] -left-[40px]" },
+      { id: 32, name: "RightHand", src: "./src/assets/manFront/rightHand.png", partClass: "row-start-5 col-start-2 top-[34px] -left-[40px]" },
       { id: 33, name: "LeftHand", src: "./src/assets/manFront/leftHand.png", partClass: "row-start-5 col-start-3 left-[14px] top-[37px]" },
       { id: 34, name: "RightThigh", src: "./src/assets/manFront/rightThigh.png", partClass: "row-start-5 col-start-2 left-[6px] top-[37px]" },
       { id: 35, name: "LeftThigh", src: "./src/assets/manFront/leftThigh.png", partClass: "row-start-5 col-start-2 left-[78px] top-[39px]" },
